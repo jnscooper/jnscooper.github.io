@@ -1,8 +1,10 @@
 @import 'tailwindcss';
 @import './css/charcoal.css';
 
-@custom-variant dark (&: is(.dark *));
-@custom-variant charcoal (&:is(.charcoal *));
+/* @custom-variant dark (&: is(.dark *)); */
+@custom-variant dark (&:where(.dark, .dark *));
+/* @custom-variant charcoal (&:is(.charcoal *)); */
+@custom-variant charcoal (&:where(.charcoal, .charcoal *));
 
 @theme inline {
   --font-poppins: 'Poppins', sans-serif;
