@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="charcoal">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>portfolio</title>
-    <script type="module" crossorigin src="/assets/main-Dzo5fdlx.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/main-bBS9-nys.css">
+    <script type="module" crossorigin src="/assets/main-DK5WPG5T.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-Bz9yh-wg.css">
   </head>
   <body>
     <div id="smooth-wrapper">
@@ -14,29 +14,54 @@
         <header class="min-h-[80vh] relative p-8">
           <div class="flex flex-col font-orbitron sticky top-1/3">
             <h1 class="text-[min(10vw,var(--text-9xl))] uppercase">JCoop</h1>
-            <h2 class="text-[min(8vw,var(--text-9xl))]">FRONTEND DEV</h2>
+            <h2 class="text-[min(8vw,var(--text-9xl))] w-fit">FRONTEND DEV</h2>
           </div>
         </header>
-        <main class="bg-white px-8">
+        <main class="px-8">
           <section id="__portfolio" class="flex flex-col lg:flex-row gap-8">
             <div class="left w-fit font-orbitron text-[min(5vw,var(--text-9xl))] z-100 lg:z-0">
               <h1 class="uppercase">portfolios</h1>
               <h1 id="keyword" class="wrap-break-word lg:mt-24">JavaScript</h1>
             </div>
             <div class="right flex-2 lg:mt-64 space-y-20 lg:z-100">
-              <ul data-keyword="JavaScript" class="collection w-full h-[200vh] bg-blue-400 rounded-xl"></ul>
-              <ul data-keyword="Vue" class="collection w-full h-screen bg-amber-400 rounded-xl"></ul>
+              <ul
+                data-keyword="JavaScript"
+                class="collection w-full h-[200vh] bg-success text-success-foreground rounded-xl"
+              ></ul>
+              <ul
+                data-keyword="Vue"
+                class="collection w-full h-screen bg-primary text-primary-foreground rounded-xl"
+              ></ul>
+              <ul
+                data-keyword="Node.js"
+                class="collection w-full h-screen bg-primary text-primary-foreground rounded-xl"
+              ></ul>
             </div>
           </section>
         </main>
-        <footer id="__link" class="w-full min-h-[80vh] mt-64 p-8 z-100 font-orbitron">
-          <h1 class="text-[min(5vw,var(--text-9xl))] uppercase">links</h1>
-          <ul class="text-[min(4vw,var(--text-6xl))]">
-            <li>
-              <a href="https://github.com/jnscooper" target="_blank">github</a>
+        <footer id="__link" class="w-full min-h-[50vh] mt-64 p-8 z-100 font-orbitron flex flex-col">
+          <h1 data-animate-line class="text-[min(5vw,var(--text-9xl))] uppercase">links</h1>
+          <p data-animate-line>
+            share link via
+            <a href="mailto:test@example.com" class="text-primary font-bold">Email</a>.
+          </p>
+          <ul class="text-[min(4vw,var(--text-6xl))] mt-10">
+            <li data-animate-line>
+              <a
+                href="https://github.com/jnscooper"
+                target="_blank"
+                data-scramble
+                data-scramble-text="My github profile"
+                class="link"
+              >
+                github
+              </a>
             </li>
           </ul>
+          <j-copyright name="JCoop" from="2026" class="mt-auto"></j-copyright>
         </footer>
+
+        <div id="__scroll-progress" class="fixed right-0 inset-y-0 h-0 w-2 bg-primary"></div>
       </div>
     </div>
   </body>
