@@ -5,4 +5,7 @@
   "prettier.semi": false,
   "prettier.tabWidth": 2,
   "prettier.printWidth": 120,
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
 }

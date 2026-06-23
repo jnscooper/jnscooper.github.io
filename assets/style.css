@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --font-poppins: 'Poppins', sans-serif;
+}
+
+body {
+  @apply font-poppins min-h-screen;
+}
