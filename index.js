@@ -1,9 +1,10 @@
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ScrollSmoother } from 'gsap/ScrollSmoother'
+import { SplitText } from 'gsap/SplitText'
 import Lenis from 'lenis'
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText)
 
 ScrollSmoother.create({
   smooth: 1,
@@ -11,8 +12,14 @@ ScrollSmoother.create({
   smoothTouch: 0.1,
 })
 
-new Lenis({
+const lenis = new Lenis({
   autoRaf: true,
+})
+
+lenis.on('scroll', ScrollTrigger.update)
+
+window.addEventListener('DOMContentLoaded', () => {
+  document.documentElement.style.overflow = 'hidden'
 })
 
 /** @type {HTMLDivElement | null} */
@@ -24,7 +31,6 @@ const collections = gsap.utils.toArray('.collection')
 
 function calculateCollectionsHeight(collections) {
   const height = collections.reduce((acc, collection) => acc + collection.clientHeight, 0)
-  console.log(height)
   return height
 }
 
@@ -71,3 +77,37 @@ function updateKeyword(text) {
       duration: 0.2,
     })
 }
+
+const split = SplitText.create('[data-animate-line]', { type: 'chars,words,lines' })
+
+gsap.from(split.lines, {
+  rotationY: -100,
+  transformOrigin: '50% 50%',
+  opacity: 0,
+  duration: 1,
+  ease: 'power3',
+  stagger: 0.25,
+  scrollTrigger: {
+    trigger: '[data-animate-line]',
+    start: 'top 80%',
+    toggleActions: 'play none none none',
+    once: true,
+  },
+})
+
+const bar = document.getElementById('__scroll-progress')
+
+const state = { progress: 0 }
+
+gsap.to(state, {
+  progress: 100,
+  ease: 'bounce.out',
+  scrollTrigger: {
+    start: 'top top',
+    end: 'bottom bottom',
+    scrub: true,
+    onUpdate: (self) => {
+      bar && (bar.style.height = `${self.progress * 100}%`)
+    },
+  },
+})

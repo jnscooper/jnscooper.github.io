@@ -30,7 +30,7 @@
                 pariatur suscipit nemo quam id natus, necessitatibus recusandae esse at molestiae, facilis aperiam,
                 debitis repellendus maxime.
               </ul>
-              <ul data-keyword="Vue" class="collection w-full h-screen bg-error text-error-foreground rounded-xl">
+              <ul data-keyword="Vue" class="collection w-full h-screen bg-primary text-primary-foreground rounded-xl">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates dicta omnis assumenda. Officiis
                 voluptatum saepe expedita magnam veritatis, quae alias delectus praesentium molestias. Labore, vel
                 rerum. Cupiditate officiis dignissimos delectus!
@@ -39,14 +39,16 @@
           </section>
         </main>
         <footer id="__link" class="w-full min-h-[50vh] mt-64 p-8 z-100 font-orbitron flex flex-col">
-          <h1 class="text-[min(5vw,var(--text-9xl))] uppercase">links</h1>
+          <h1 data-animate-line class="text-[min(5vw,var(--text-9xl))] uppercase">links</h1>
           <ul class="text-[min(4vw,var(--text-6xl))]">
-            <li>
+            <li data-animate-line>
               <a href="https://github.com/jnscooper" target="_blank">github</a>
             </li>
           </ul>
           <j-copyright name="JCoop" from="2026" class="mt-auto"></j-copyright>
         </footer>
+
+        <div id="__scroll-progress" class="fixed right-0 inset-y-0 h-0 w-2 bg-primary"></div>
       </div>
     </div>
     <script type="module" src="/main.js"></script>
