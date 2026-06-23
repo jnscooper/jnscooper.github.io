@@ -1,12 +1,25 @@
 @import 'tailwindcss';
+@import './css/charcoal.css';
+
+@custom-variant dark (&: is(.dark *));
+@custom-variant charcoal (&:is(.charcoal *));
 
 @theme inline {
   --font-poppins: 'Poppins', sans-serif;
   --font-orbitron: 'Orbitron Variable', sans-serif;
+
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+  --color-primary: var(--color-primary);
+  --color-primary-foreground: var(--color-primary-foreground);
+  --color-error: var(--color-error);
+  --color-error-foreground: var(--color-error-foreground);
+  --color-success: var(--color-success);
+  --color-success-foreground: var(--color-success-foreground);
 }
 
 body {
-  @apply font-poppins min-h-screen;
+  @apply font-poppins min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground;
 }
 
 .pin-spacer {
