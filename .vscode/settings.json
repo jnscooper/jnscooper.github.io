@@ -7,5 +7,10 @@
   "prettier.printWidth": 120,
   "files.associations": {
     "*.css": "tailwindcss"
-  }
+  },
+  "cSpell.words": [
+    "gsap",
+    "orbitron",
+    "wght"
+  ]
 }

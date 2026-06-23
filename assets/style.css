@@ -2,8 +2,13 @@
 
 @theme inline {
   --font-poppins: 'Poppins', sans-serif;
+  --font-orbitron: 'Orbitron Variable', sans-serif;
 }
 
 body {
   @apply font-poppins min-h-screen;
+}
+
+.pin-spacer {
+  @apply lg:overflow-hidden!;
 }
