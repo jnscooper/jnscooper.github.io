@@ -12,7 +12,7 @@
         <header class="min-h-[80vh] relative p-8">
           <div class="flex flex-col font-orbitron sticky top-1/3">
             <h1 class="text-[min(10vw,var(--text-9xl))] uppercase">JCoop</h1>
-            <h2 class="text-[min(8vw,var(--text-9xl))]">FRONTEND DEV</h2>
+            <h2 class="text-[min(8vw,var(--text-9xl))] w-fit">FRONTEND DEV</h2>
           </div>
         </header>
         <main class="px-8">
@@ -25,24 +25,35 @@
               <ul
                 data-keyword="JavaScript"
                 class="collection w-full h-[200vh] bg-success text-success-foreground rounded-xl"
-              >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam itaque provident voluptates maiores dolorem
-                pariatur suscipit nemo quam id natus, necessitatibus recusandae esse at molestiae, facilis aperiam,
-                debitis repellendus maxime.
-              </ul>
-              <ul data-keyword="Vue" class="collection w-full h-screen bg-primary text-primary-foreground rounded-xl">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates dicta omnis assumenda. Officiis
-                voluptatum saepe expedita magnam veritatis, quae alias delectus praesentium molestias. Labore, vel
-                rerum. Cupiditate officiis dignissimos delectus!
-              </ul>
+              ></ul>
+              <ul
+                data-keyword="Vue"
+                class="collection w-full h-screen bg-primary text-primary-foreground rounded-xl"
+              ></ul>
+              <ul
+                data-keyword="Node.js"
+                class="collection w-full h-screen bg-primary text-primary-foreground rounded-xl"
+              ></ul>
             </div>
           </section>
         </main>
         <footer id="__link" class="w-full min-h-[50vh] mt-64 p-8 z-100 font-orbitron flex flex-col">
           <h1 data-animate-line class="text-[min(5vw,var(--text-9xl))] uppercase">links</h1>
-          <ul class="text-[min(4vw,var(--text-6xl))]">
+          <p data-animate-line>
+            share link via
+            <a href="mailto:test@example.com" class="text-primary font-bold">Email</a>.
+          </p>
+          <ul class="text-[min(4vw,var(--text-6xl))] mt-10">
             <li data-animate-line>
-              <a href="https://github.com/jnscooper" target="_blank">github</a>
+              <a
+                href="https://github.com/jnscooper"
+                target="_blank"
+                data-scramble
+                data-scramble-text="My github profile"
+                class="link"
+              >
+                github
+              </a>
             </li>
           </ul>
           <j-copyright name="JCoop" from="2026" class="mt-auto"></j-copyright>

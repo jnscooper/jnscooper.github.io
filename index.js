@@ -2,9 +2,10 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ScrollSmoother } from 'gsap/ScrollSmoother'
 import { SplitText } from 'gsap/SplitText'
+import { ScrambleTextPlugin } from 'gsap/ScrambleTextPlugin'
 import Lenis from 'lenis'
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText)
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrambleTextPlugin)
 
 ScrollSmoother.create({
   smooth: 1,
@@ -40,7 +41,7 @@ ScrollTrigger.create({
   end: () => `+=${calculateCollectionsHeight(collections)}`,
   // end: () => `bottom 50%`,
   pin: true,
-  markers: true,
+  markers: false,
 })
 
 collections.forEach((collection) => {
@@ -110,4 +111,30 @@ gsap.to(state, {
       bar && (bar.style.height = `${self.progress * 100}%`)
     },
   },
+})
+
+/** @type {HTMLElement[]} */
+const scrambles = gsap.utils.toArray('[data-scramble]')
+
+scrambles.forEach((link) => {
+  const original = link.textContent
+
+  const tl = gsap.timeline({ paused: true })
+
+  tl.to(link, {
+    duration: link.dataset.duration || 0.8,
+    scrambleText: {
+      text: link.dataset.scrambleText || original,
+    },
+  })
+
+  link.addEventListener('mouseenter', () => tl.restart())
+  link.addEventListener('mouseleave', () => {
+    gsap.to(link, {
+      duration: 0.6,
+      scrambleText: {
+        text: original,
+      },
+    })
+  })
 })
