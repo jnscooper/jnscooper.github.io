@@ -20,7 +20,7 @@ const lenis = new Lenis({
 lenis.on('scroll', ScrollTrigger.update)
 
 window.addEventListener('DOMContentLoaded', () => {
-  document.documentElement.style.overflow = 'hidden'
+  document.documentElement.style.scrollbarWidth = 'none'
 })
 
 /** @type {HTMLDivElement | null} */

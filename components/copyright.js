@@ -22,7 +22,7 @@ class Copyright extends HTMLElement {
     }
 
     this.classList.add(...'text-sm'.split(' '))
-    this.innerHTML = `${period} &copy; ${this.#name}`
+    this.innerHTML = `&copy; ${period} ${this.#name}. All rights reserved.`
   }
 }
 

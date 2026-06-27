@@ -11,6 +11,9 @@ importers:
       '@fontsource-variable/orbitron':
         specifier: ^5.2.8
         version: 5.2.8
+      '@fontsource/fugaz-one':
+        specifier: ^5.2.7
+        version: 5.2.7
       '@fontsource/poppins':
         specifier: ^5.2.7
         version: 5.2.7
@@ -50,6 +53,9 @@ packages:
 
   '@fontsource-variable/orbitron@5.2.8':
     resolution: {integrity: sha512-Jazvuj2cgBq663z1j/+JdwH2ztqQ8RaGhJgdHYphFbtfowiFaR74R8UgZl7x1skbXmUMWWH1jXfG7mrYFIYK0A==}
+
+  '@fontsource/fugaz-one@5.2.7':
+    resolution: {integrity: sha512-jkzV+HCNQaPWiYRnrxIG8HNv1HrT4ahiEhzh+D1cB5FJw/rbMKR2nE+by0m4SgyReyIB/Dk1SLSI9C4JYK0RQw==}
 
   '@fontsource/poppins@5.2.7':
     resolution: {integrity: sha512-6uQyPmseo4FgI97WIhA4yWRlNaoLk4vSDK/PyRwdqqZb5zAEuc+Kunt8JTMcsHYUEGYBtN15SNkMajMdqUSUmg==}
@@ -685,6 +691,8 @@ snapshots:
     optional: true
 
   '@fontsource-variable/orbitron@5.2.8': {}
+
+  '@fontsource/fugaz-one@5.2.7': {}
 
   '@fontsource/poppins@5.2.7': {}
 

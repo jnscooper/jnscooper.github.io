@@ -9,6 +9,7 @@
 @theme inline {
   --font-poppins: 'Poppins', sans-serif;
   --font-orbitron: 'Orbitron Variable', sans-serif;
+  --font-fugaz: 'Fugaz One', system-ui;
 
   --color-background: var(--color-background);
   --color-foreground: var(--color-foreground);
